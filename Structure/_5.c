@@ -64,7 +64,7 @@ int main(){
 }
 void menu(){
     int ch;
-    printf("============================Menu============================\n\n");
+    printf("==============================Menu=============================\n\n");
     printf("\t\t-1. Search \n");
     printf("\t\t-2. Deposit & Withdrawal\n");
     printf("Input:");
@@ -88,10 +88,12 @@ void menu(){
 }
 
 void find(struct bank customer[],int size){
-        
+    int count =0;   
     for(int i=0;i<size;i++){
         if (customer[i].blnc < 100)
-        {
+        {   
+            printf("Records Found..\n\n");
+
             printf("Name: %s\t", customer[i].name);
 
             printf("Account No: %d\t", customer[i].acc_no);
@@ -128,7 +130,7 @@ void operation(struct bank customer[],int size){
                     menu();
                     break;
                 case 2:
-                    if(customer[i].blnc>    100){
+                    if(customer[i].blnc>100){
                         printf("Enter Withdrawal Ammount: ");
                         scanf("%d", &temp);
                         customer[i].blnc -= temp;
@@ -137,11 +139,12 @@ void operation(struct bank customer[],int size){
                         printf("Insufficient Balnace");
                         getchar();
                         cls();
+                        operation(customer,size);
                     }
-                    menu();
+                    
                     break;
                 default:
-                    printf("Invalid\n");
+                    printf("Invalid");
                     operation(customer, size);
                 }
         }
