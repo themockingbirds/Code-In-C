@@ -1,12 +1,12 @@
 /* 
-    6. An automobile company has serial number for number of engine parts starting from AA0 to FF9. The other characteristics of parts are 
-    year of manufacture, material and quantity manufactured.
+
+    6. An automobile company has serial number for number of engine parts starting from AA0 to FF9. The other characteristics of parts are year of manufacture, material and quantity manufactured.
 	a. Specify a structure to store the information corresponding to a part.
-            
     Write a program to retrieve information on parts with serial numbers between BB1 & CC6.
  */
 
 #include <stdio.h>
+#include<stdlib.h>
 #include <string.h>
 
 
@@ -34,7 +34,7 @@ int main()
     scanf("%s", to);
     system("cls");
     eng_info(from, to);
-    _getch();
+    getchar();
     return 0;
 }
 
@@ -54,7 +54,7 @@ void eng_info(char *from, char *to)
         if (i == 10)
             i = 0;
         i++;
-        
+
         if (maruti[i].serial[0] == *to && maruti[i].serial[2] == *(to + 2))
         {
             printf("\nSerial Number : %s", maruti[i].serial);
