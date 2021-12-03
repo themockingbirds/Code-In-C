@@ -1,0 +1,3 @@
+Input 1st No: 23
+Input 2nd No: 2
+Sum : 25
