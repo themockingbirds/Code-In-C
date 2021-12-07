@@ -7,7 +7,7 @@ int main()
     FILE *fp;
     char ch;
     system("clear");
-    fp = fopen("//Users//Documents/abc.txt", "w");
+    fp = fopen("//Users//Documents//abc.txt", "w");
     if (fp == NULL)
     {
         printf("Error");
