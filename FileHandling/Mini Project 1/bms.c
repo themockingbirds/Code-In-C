@@ -62,21 +62,6 @@ int main()
     }
     cls();
     display();
-    /* printf("\tList Of All Customer and Thier Details are given Below: \n");
-    printf("\tName\t\tAccount No\t\tBalance\t\tcode\n");
-
-    // print all record on the console...
-    for (int i = 0; i < size; i++)
-    {
-        printf("%s\t\t", customer[i].name);
-
-        printf("%4d\t\t", customer[i].acc_no);
-
-        printf("%.2f\t\t", customer[i].blnc);
-        printf("%d", customer[i].code);
-        printf("\n\n"); 
-    }*/
-
     menu();
     // function to find records of those customers whose acc blnc is below 100
     // find(customer,size);
